@@ -1,0 +1,27 @@
+- name: yum install for Investigation command
+  yum: name={{ item }} state=latest
+  with_items:
+    - dstat
+    - sysstat
+    - iotop
+    - mlocate
+    - telnet
+
+- name: yum install for other command
+  yum: name={{ item }} state=latest
+  with_items:
+    - vim
+    - wget
+    - tree
+    - postfix
+    - unzip
+    - make
+    - gcc
+
+- name: yum install for EPEL
+  yum: name=epel-release state=latest
+
+- name: yum install for MonitoringTools command
+  yum: name={{ item }} state=latest
+  with_items:
+    - monit
