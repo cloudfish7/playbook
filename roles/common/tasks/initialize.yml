@@ -42,4 +42,32 @@
 - name: (Initialize) history file setting 2
   lineinfile:
     dest: /etc/bashrc
-    line: HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
+    line: HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S'
+
+#- name: create the file to be used for swap
+#  command: fallocate -l 4G /swapfile
+#  args:
+#    creates: /swapfile
+#
+#- name: format the file for swap
+#  command: mkswap /swapfile
+#  args:
+#    creates: /swapfile
+#
+#- name: change swap file permissions
+#  file: path=/swapfile owner=root group=root mode=0600
+#
+#- name: add the file to the system as a swap file ( CentOS 6 )
+#  command: swapon /swapfile
+#  when: ansible_os_family == 'RedHat' and ansible_distribution_version.split('.')[0]|int == 6
+#  args:
+#    creates: /swapfile
+#
+#- name: add the file to the system as a swap file ( CentOS 7 )
+#  command: swapon -a
+#  when: ansible_os_family == 'RedHat' and ansible_distribution_version.split('.')[0]|int == 7
+#  args:
+#    creates: /swapfile
+#
+#- name: write swap entry in /etc/fstab
+#  mount: name=swap src=/swapfile fstype=swap opts=defaults passno=0 dump=0 state=present
