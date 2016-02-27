@@ -1,0 +1,7 @@
+- name: yum install for Apache Web Server
+  yum: name={{ item }} state=latest
+  with_items:
+    - {{ pkg }}
+
+- name: Change the httpd.conf to template file
+  copy: src={{ pkg }}.conf dest=/etc/httpd/conf/httpd.conf owner=root group=root mode=0644
