@@ -1,6 +1,5 @@
 - include: investigation-command.yml
 - include: need-command.yml
-- include: epel.yml
 - include: monitoringtools-command.yml
 - include: kaizen-operation.yml
 - include: aws-sdk.yml
