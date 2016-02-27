@@ -1,2 +1,0 @@
-- name: (EPEL) yum install
-  yum: name=epel-release state=latest
