@@ -4,3 +4,4 @@
 - include: kaizen-operation.yml
 - include: aws-sdk.yml
 - include: initialize.yml
+- include: user.yml

@@ -8,5 +8,5 @@ UserData on EC2 add the this code.
     ansible-playbook playbook/main.yml
     # Remove the comment, if necessary.
     # ansible-playbook playbook/nrpe.yml
-    # ansible-playbook playbook/apache.yml --extra-vars "pkg=httpd"
-    # ansible-playbook playbook/apache.yml --extra-vars "pkg=httpd24"
+    # ansible-playbook playbook/apache.yml
+    # ansible-playbook playbook/php.yml --extra-vars "pkg=php53"
