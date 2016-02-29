@@ -1,5 +1,0 @@
-    cat cat <<EOF > main.yml
-    user:
-     - { ssh_user: joy }
-     - { ssh_user: tom }
-    EOF
