@@ -1,5 +1,7 @@
 UserData on EC2 add the this code.
 
+    #!/bin/sh
+    yum update -y
     yum install epel-release -y
     yum install gcc python-devel python-crypto python-pip git -y
     easy_install pip
