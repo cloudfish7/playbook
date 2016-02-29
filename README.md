@@ -16,4 +16,9 @@ UserData on EC2 add the this code.
     # Remove the comment, if necessary.
     # ansible-playbook playbook/nrpe.yml
     # ansible-playbook playbook/apache.yml
+    # cat <<EOF > playbook/roles/apache/vars/main.yml
+    # site:
+    #  - { domain: "www.test1.com", owner: "root" }
+    #  - { domain: "www.test2.co.jp", owner: "apache" }
+    # EOF
     # ansible-playbook playbook/php.yml --extra-vars "pkg=php53"
