@@ -7,6 +7,11 @@ UserData on EC2 add the this code.
     easy_install pip
     pip install ansible
     git clone https://github.com/shogomuranushi/playbook.git
+    cat <<EOF > playbook/roles/common/vars/main.yml
+    user:
+     - { ssh_user: joy }
+     - { ssh_user: tom }
+    EOF
     ansible-playbook playbook/main.yml
     # Remove the comment, if necessary.
     # ansible-playbook playbook/nrpe.yml
