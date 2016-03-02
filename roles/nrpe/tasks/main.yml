@@ -12,3 +12,7 @@
     - check_log2
     - check_log3
     - check_memory
+
+- name: (nrpe)
+  template: src=nrpe.cfg dest=/etc/nagios/
+  notify: restart nrpe

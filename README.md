@@ -14,7 +14,7 @@ UserData on EC2 add the this code.
     EOF
     ansible-playbook playbook/main.yml
     # Remove the comment, if necessary.
-    # ansible-playbook playbook/nrpe.yml --extra-vars "nagios-server=,11.22.33.44"
+    # ansible-playbook playbook/nrpe.yml --extra-vars "nagiosserver=,11.22.33.44"
 
     # ansible-playbook playbook/apache.yml
     # cat <<EOF > playbook/roles/apache/vars/main.yml

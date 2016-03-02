@@ -25,13 +25,13 @@
     - "{{ user }}"
 #  when: file.stat.exists
 
-- name: (useradd) Retrieve a private key from remote host
-  fetch:
-    src: /home/{{ item.ssh_user }}/.ssh/id_rsa
-    dest: fetch/private_key-{{ item.ssh_user }}
-    validate_md5: true
-    fail_on_missing: true
-    flat: true
-  with_items:
-    - "{{ user }}"
+#- name: (useradd) Retrieve a private key from remote host
+#  fetch:
+#    src: /home/{{ item.ssh_user }}/.ssh/id_rsa
+#    dest: fetch/private_key-{{ item.ssh_user }}
+#    validate_md5: true
+#    fail_on_missing: true
+#    flat: true
+#  with_items:
+#    - "{{ user }}"
 #  when: file.stat.exists
