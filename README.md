@@ -6,6 +6,7 @@ UserData on EC2 add the this code.
     yum install gcc python-devel python-crypto python-pip git -y
     easy_install pip
     pip install ansible
+    cd ~
     git clone https://github.com/shogomuranushi/playbook.git
     cat <<EOF > playbook/roles/common/vars/main.yml
     user:
