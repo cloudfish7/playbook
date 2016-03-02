@@ -15,10 +15,15 @@ UserData on EC2 add the this code.
     ansible-playbook playbook/main.yml
     # Remove the comment, if necessary.
     # ansible-playbook playbook/nrpe.yml --extra-vars "nagios-server=,11.22.33.44"
+
     # ansible-playbook playbook/apache.yml
     # cat <<EOF > playbook/roles/apache/vars/main.yml
     # site:
     #  - { domain: "www.test1.com", owner: "root" }
     #  - { domain: "www.test2.co.jp", owner: "apache" }
     # EOF
+    # ansible-playbook playbook/apache.yml
+
     # ansible-playbook playbook/php.yml --extra-vars "pkg=php53"
+
+    # ansible-playbook playbook/vsftpd.yml --extra-vars "eip=22.33.44.55"
